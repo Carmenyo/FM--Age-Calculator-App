@@ -5,33 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- STYLES   -->
+<link rel="stylesheet" href="./styles/main.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+<title>Frontend Mentor | Age calculator app</title>
+
+
 </head>
 <body>
 
-  Day
-  DD
+  <main class="container">
+    <div class="content">
+      <div class="input-box">
+        <!-- DAY -->
+        <label for="day"><small>DAY</small></label>
+        <input type="number" class="day" placeholder="DD" required>
+        <span><small class="error">The field is required</small></span>
+<!-- MONTH -->
+<label for="day"><small>MONTH</small></label>
+<input type="number" class="month" placeholder="MM" required>
+<span><small class="error">The field is required</small></span>
+<!-- YEAR -->
+<label for="day"><small>YEAR</small></label>
+<input type="number" class="year" placeholder="YYYY" required>
+<span><small class="error">The field is required</small></span>
+      </div>
+    
+<button class="submit-button"> <img src="./assets/images/icon-arrow.svg" alt="icon-arrow"> </button>
+<hr>
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<div>
+  <div class="display">
+    <div>
+       <span class="display-years">- -</span>years
+    </div>
+   <div>
+    <span class="display-months">- -</span>months
+   </div>
+    <div>
+      <span class="display-days">- -</span>days 
+    </div>
+   
+</div>
   </div>
+</div>
+  </main>
+  
+  
+ 
 </body>
 </html>
