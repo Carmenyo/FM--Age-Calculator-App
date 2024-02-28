@@ -1,115 +1,162 @@
-:root{
---FontFamily: "Poppins", sans-serif;
---Purple: hsl(259, 100%, 65%);
---LightRed: hsl(0, 100%, 67%);
---White: hsl(0, 0%, 100%);
---OffWhite: hsl(0, 0%, 94%);
---LightGrey: hsl(0, 0%, 86%);
---SmokeyGrey: hsl(0, 1%, 44%);
---OffBlack: hsl(0, 0%, 8%);
-
+/* VARIABLES */
+:root {
+  --FontFamily: "Poppins", sans-serif;
+  --Purple: hsl(259, 100%, 65%);
+  --LightRed: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --OffWhite: hsl(0, 0%, 94%);
+  --LightGrey: hsl(0, 0%, 86%);
+  --SmokeyGrey: hsl(0, 1%, 44%);
+  --OffBlack: hsl(0, 0%, 8%);
+}
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
+  font-family: var(--FontFamily);
+  background-color: var(--OffWhite);
 }
 
-body{
-    font-family: var(--FontFamily);
-    background-color: var(--OffWhite);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content {
+  width: 53rem;
+  max-width: 53rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 1rem 1rem 11.5rem 1rem;
+  padding: 4rem;
+}
+.input-box {
+  margin-left: -11rem;
 }
 
-.container{
+.input-box span {
+  margin-left: -11rem;
+  margin-top: 5.5rem;
+  position: absolute;
+  color: var(--LightRed);
+}
+
+label small {
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: -0.75rem;
+  letter-spacing: 0.3rem;
+  columns: hsl(0, 1%, 44%);
+  font-weight: 700;
+}
+input {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 1rem;
+  max-width: 10rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: solid hsl(0, 1%, 62%) 1px;
+}
+
+input:focus {
+  outline: 1.5px solid hsl(259, 100%, 65%);
+}
+
+hr {
+  width: 45rem;
+  position: absolute;
+  margin-top: -13rem;
+}
+
+button {
+  background-color: var(--Purple);
+  width: 6rem;
+  height: 6rem;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem;
+  margin: 0rem -40rem 0 0;
+  cursor: pointer;
+  z-index: 1;
+}
+button:hover {
+  background-color: var(--OffBlack);
+  transition: 0.3s;
+}
+
+.display {
+  margin-top: -1rem;
+  margin-left: -13rem;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 6rem;
+  line-height: 7rem;
+}
+
+.display-years,
+.display-months,
+.display-days {
+  color: var(--Purple);
+}
+
+/* MEDIAQUERY */
+
+@media (max-width: 375px) {
+  .content {
+    width: 90%;
+    border-radius: 1rem 1rem 5rem 1rem;
+    padding: 3rem 0.5rem;
+  }
+
+  .input-box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.content{
-  
-    width: 53rem;
-    max-width: 53rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--White);
-    border-radius: 1rem 1rem 11.5rem 1rem;
-    padding: 4rem;
-}
-label small{
-    position: absolute;
-    margin-left: 1rem;
-    margin-top: -.75rem;
-    letter-spacing: .3rem;
-    columns: hsl(0,1%,44%);
-    font-weight: 700;
-    
-}
-input{
-    font-size: 2rem;
+    width: 100%;
+    margin-left: 1px;
+  }
+
+  input {
+    max-width: 5rem;
+    font-size: 1.5rem;
     font-weight: 800;
-    margin: 1rem;
-    max-width: 10rem;
-    padding: 1rem 1.25rem; 
-    border-radius: .5rem;
-    border: solid hsl(0, 1%, 44%) 1px;
-}
+    padding: 0.5rem 0.75rem;
+  }
 
-input:focus{
-    outline: 1.5px solid hsl(259, 100%, 65%);
-}
-
-.input-box{
+  .input-box span {
     margin-left: -11rem;
-}
-
-
-.input-box span{
- margin-left: -11rem;
- margin-top: 5.5rem;
-position: absolute;
-color:var(--LightRed);
-
-}
-
-hr{
-    width: 45rem;
+    margin-top: 5.5rem;
     position: absolute;
-    margin-top: -13rem;
+    color: var(--LightRed);
+  }
 
-}
+  .input-box span {
+    border: solid 1px red;
+    max-width: 100%;
+    margin-top: 3.5rem;
+    font-size: 9px;
+    color: var(--LightRed);
+  }
 
-button{
-    background-color: var(--Purple);
-    width: 6rem;
-    height: 6rem;
-    border: none;
-    border-radius: 3rem ;
-    padding: 1rem;
-    margin: 0rem -40rem 0 0;
-    cursor: pointer;
-    z-index: 1;
-}
-button:hover{
-    background-color: var(--OffBlack);
-    transition: 0.3s;
-}
+  button {
+    margin: 1rem 0 0 0;
+  }
 
-.display{
-    margin-top: -1rem;
-    margin-left: -13rem;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 6rem ;
-    line-height: 7rem;
-    
-}
+  hr {
+    display: none;
+  }
 
-.display-years, .display-months, .display-days{
-    color: var(--Purple);
-    
+  .display {
+    width: 100%;
+    margin: 1rem 1rem 0 -1rem;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
 }
-
