@@ -1,4 +1,4 @@
-// Selecciona los elementos del DOM
+// DECLARACIÓN DE VARIABLES
 const input = document.querySelectorAll("input");
 const errorMessage = document.querySelectorAll(".error");
 const button = document.querySelector(".submit-button");
@@ -11,7 +11,7 @@ const toggleError = (index, show) => {
     errorMessage[index].style.opacity = show ? 1 : 0;
 }
 
-// Función
+// Función principal
 const calculateAge = () => {
     // Verifica si los campos de entrada están vacíos
     let isEmpty = false;
